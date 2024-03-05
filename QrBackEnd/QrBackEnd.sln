@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrBackEnd", "QrBackEnd\QrBackEnd.csproj", "{3C22C333-7472-4531-B174-C3A75BBF6996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScanShow.Data", "ScanShow.Data\ScanShow.Data.csproj", "{41E4C974-B198-4AEC-B371-8B7DA89A87EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C22C333-7472-4531-B174-C3A75BBF6996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C22C333-7472-4531-B174-C3A75BBF6996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C22C333-7472-4531-B174-C3A75BBF6996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C22C333-7472-4531-B174-C3A75BBF6996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E4C974-B198-4AEC-B371-8B7DA89A87EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E4C974-B198-4AEC-B371-8B7DA89A87EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E4C974-B198-4AEC-B371-8B7DA89A87EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E4C974-B198-4AEC-B371-8B7DA89A87EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B56D96F7-7BBF-4E1F-B8BA-E378779878C4}
+	EndGlobalSection
+EndGlobal
