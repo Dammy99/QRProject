@@ -1,0 +1,136 @@
+/*FOOTER*/
+
+footer {
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
+    background: linear-gradient(59deg, #3A6073, #16222A);
+    color: white;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+        color: #fff;
+        font-size: 14px;
+        transition-duration: 0.2s;
+        background-color: none;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #FA944B;
+        text-decoration: none;
+    }
+}
+
+.row{
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    gap: 10vw;
+}
+
+
+.copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+}
+
+.footer-middle {
+    padding-top: 2em;
+    color: white;
+}
+
+.footerPad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*SOCİAL İCONS*/
+
+/* footer social icons */
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0 !important;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+
+.icoFacebook:hover {
+    background-color: #3B5998;
+}
+
+.icoLinkedin:hover {
+    background-color: #007bb7;
+}
+
+.icoFacebook:hover i,
+.icoLinkedin:hover i {
+    color: #fff;
+}
+.socialIcon:hover,
+.socialHoverClass {
+    color: #44BCDD;
+}
+
+.socialCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.socialCircle li a {
+    display: inline-block;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+li a:hover i,
+.triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}

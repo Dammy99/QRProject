@@ -18,13 +18,17 @@ const Header: React.FC = () => {
     navigate(`/organization`);
   };
 
+  const handleGenerationClick = () => {
+    navigate(`/generation`);
+  };
+
   return (
     <>
       <header className={styles.header}>
         <div className={styles.tabs}>
           <button onClick={handleStorageClick} className={styles.tab}>Склад</button>
           <button onClick={handleOrgClick} className={styles.tab}>Налаштування організації</button>
-          <button className={styles.tab}>Генерація QR коду</button>
+          <button onClick={handleGenerationClick} className={styles.tab}>Генерація QR коду</button>
         </div>
         {showMenu ? (
           <>
