@@ -1,6 +1,8 @@
 /*FOOTER*/
 
 footer {
+    padding-top: 20px;
+    /* margin-top: 20px; */
     background: #16222A;
     background: -webkit-linear-gradient(59deg, #3A6073, #16222A);
     background: linear-gradient(59deg, #3A6073, #16222A);
@@ -8,6 +10,7 @@ footer {
     margin-top: auto;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     a {
         color: #fff;
@@ -21,6 +24,17 @@ footer {
         text-decoration: none;
     }
 }
+.topContent{
+    margin-top: 10px;
+    .container{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.bottomContent{
+    display: flex;
+    justify-content: center;
+}
 
 .row{
     flex-direction: row;
@@ -29,6 +43,12 @@ footer {
     gap: 10vw;
 }
 
+hr{
+    height: 2px;
+    width: 90%;
+    background-color: white;
+    border: 1px solid #007bb7;
+}
 
 .copy {
     font-size: 12px;
@@ -63,12 +83,6 @@ ul {
     padding: 0;
 }
 
-li {
-    display: inline;
-    margin: 0 5px;
-}
-
-
 /* footer social icons */
 
 
@@ -78,6 +92,10 @@ li {
 
 .icoLinkedin:hover {
     background-color: #007bb7;
+}
+
+.icoLinkedin:hover {
+    background-color: #b15892;
 }
 
 .icoFacebook:hover i,
