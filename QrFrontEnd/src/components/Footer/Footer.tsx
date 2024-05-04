@@ -1,6 +1,4 @@
 import styles from "./Footer.module.css";
-// import InstagramIcon from "@mui/icons-material/Instagram";
-// import { IconButton } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -67,34 +65,6 @@ const Footer = () => {
         <p>&copy; Copyright 2018 - Company Name. All rights reserved.</p>
       </div>
     </footer>
-    //           </div>
-    //         </div>
-    //         <div className="col-md-3">
-    //           <h4>Follow Us</h4>
-    //           <ul className={styles.socialCircle}>
-    //             <li>
-    //               <a href="#" className={styles.icoFacebook} title="Facebook">
-    //                 <i className="fa fa-facebook"></i>
-    //               </a>
-    //             </li>
-    //             <li>
-    //               <a href="#" className={styles.icoLinkedin} title="Linkedin">
-    //                 <i className="fa fa-linkedin"></i>
-    //               </a>
-    //             </li>
-    //           </ul>
-    //         </div>
-    //       </div>
-    //       <div className="row">
-    //         <div className="col-md-12 copy">
-    //           <p className="text-center">
-    //             &copy; Copyright 2018 - Company Name. All rights reserved.
-    //           </p>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </footer>
   );
 };
 
