@@ -4,6 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Storage from "./components/Storage/Storage";
 import Organization from "./components/Organization/Organization";
+import Generation from "./components/Generation/Generation";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <Routes>
         <Route path="/storage" element={<Storage />}></Route>
         <Route path="/organization" element={<Organization />}></Route>
+        <Route path="/generation" element={<Generation />}></Route>
         {/* <Route path="/" element={<Home />}></Route>
         <Route path="/price/:pricesPage" element={<Price />}></Route> */}
       </Routes>
+      <Footer />
     </>
   );
 }
