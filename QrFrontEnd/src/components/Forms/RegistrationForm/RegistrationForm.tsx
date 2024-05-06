@@ -53,7 +53,7 @@ const RegistrationForm = (props: RegisterProps) => {
           />
         </label>
         <br />
-        <RegisterButton color="#207229" size="medium" text="Зареєструватись" type="submit"/>
+        <RegisterButton hoverBackgroundColor="green" backgroundColor="#23a923" color="white"  size="medium" text="Зареєструватись" type="submit"/>
       </form>
     <img className={styles.regImg} onClick={props.setOpen} src="/cross.png"/>
     </section>

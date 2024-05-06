@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Item.module.css";
+import styles from "./StorageItem.module.css";
 import Button from "../Buttons/ProjButton/ProjButton";
 
 export interface ItemProps {
@@ -13,7 +13,7 @@ export interface ItemProps {
   category: string;
 }
 
-const Item: React.FC<ItemProps> = ({
+const StorageItem: React.FC<ItemProps> = ({
   id,
   image,
   quantity,
@@ -69,4 +69,4 @@ const Item: React.FC<ItemProps> = ({
   );
 };
 
-export default Item;
+export default StorageItem;

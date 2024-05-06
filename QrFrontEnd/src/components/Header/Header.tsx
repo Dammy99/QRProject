@@ -31,10 +31,10 @@ const Header: React.FC = () => {
     <>
       <header className={styles.header}>
         <div className={styles.tabs}>
-          <Button size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />
-          <Button size="small" hoverColor="orange" text="Склад" onClick={handleStorageClick }/>
-          <Button size="small" hoverColor="orange" text="Налаштування організації" onClick={handleOrgClick }/>
-          <Button size="small" hoverColor="orange" text="Генерація QR коду" onClick={handleGenerationClick }/>
+          <Button transition size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />
+          <Button transition size="small" hoverColor="orange" text="Склад" onClick={handleStorageClick }/>
+          <Button transition size="small" hoverColor="orange" text="Налаштування організації" onClick={handleOrgClick }/>
+          <Button transition size="small" hoverColor="orange" text="Генерація QR коду" onClick={handleGenerationClick }/>
         </div>
         {showMenu ? (
           <>
@@ -51,9 +51,7 @@ const Header: React.FC = () => {
         ) : (
           <></>
         )}
-        <button className={styles.settingsButton} onClick={handleMenuClick}>
-          Settings
-        </button>
+        <Button margin="20px" backgroundColor="grey" size="small" text="SET" onClick={handleMenuClick} />
       </header>
     </>
   );

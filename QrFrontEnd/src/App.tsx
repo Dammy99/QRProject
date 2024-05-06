@@ -2,11 +2,11 @@ import "./App.css";
 // import style from "./app/style.module.css";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Storage from "./components/Storage/Storage";
+import Storage from "./pages/Storage/Storage";
 import Organization from "./components/Organization/Organization";
 import Generation from "./components/Generation/Generation";
 import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home/OrganizationHome/OrganizationHome";
 
 function App() {
   return (

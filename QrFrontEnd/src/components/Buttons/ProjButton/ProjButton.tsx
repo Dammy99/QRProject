@@ -4,13 +4,17 @@ interface ButtonProps {
   size?: "small" | "medium" | "large";
   backgroundColor?: string;
   color?: string;
-  text?: string;
+  text: string;
   border?: string;
   type?: "button" | "reset" | "submit";
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   outline?: string;
   hoverColor?: string;
   hoverUnderline?: boolean;
+  transition?: boolean;
+  hoverZoom?: string;
+  hoverBackgroundColor?: string;
+  margin?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,6 +28,10 @@ const Button: React.FC<ButtonProps> = ({
   outline,
   hoverColor,
   hoverUnderline,
+  transition,
+  hoverZoom,
+  hoverBackgroundColor,
+  margin
 }) => {
   const buttonStyle = {
     padding:
@@ -34,14 +42,15 @@ const Button: React.FC<ButtonProps> = ({
         : "16px 32px",
     backgroundColor: backgroundColor ?? "transparent",
     outline: outline ?? "none",
-    color: color,
+    color: color ?? "black",
     border: border ?? "none",
     borderRadius: "4px",
     cursor: "pointer",
-    textDecoration: "underline",
-    transition: "0.3s ease",
+    textDecoration: "none",
+    transition: transition ? "0.3s ease" : "none",
     textDecorationThickness: '2px', // Товщина підкреслення
     textUnderlineOffset: '4px',
+    margin: margin ?? "0"
   };
 
   return (
@@ -50,12 +59,16 @@ const Button: React.FC<ButtonProps> = ({
       type={type}
       style={buttonStyle}
       onMouseOver={(e) => {
-        e.currentTarget.style.color = hoverColor ?? "initial";
+        e.currentTarget.style.color = hoverColor ?? color!;
         e.currentTarget.style.textDecoration = hoverUnderline ? "underline" : "none" 
+        e.currentTarget.style.transform = hoverZoom ? `scale(${hoverZoom})` : "none"
+        e.currentTarget.style.backgroundColor = hoverBackgroundColor! ?? backgroundColor!
       }}
       onMouseOut={(e) => {
-        e.currentTarget.style.color = "initial"
+        e.currentTarget.style.color = color! ?? "initial"
         e.currentTarget.style.textDecoration = "none"
+        e.currentTarget.style.transform = "none"
+        e.currentTarget.style.backgroundColor = backgroundColor!
       }}
     >
       {text}

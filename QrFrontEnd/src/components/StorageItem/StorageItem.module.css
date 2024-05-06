@@ -1,18 +1,16 @@
-
 .item {
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
 
     border: 1px solid #ccc;
     border-radius: 20px;
+
     .photo {
         max-width: 100px;
         max-height: 100px;
     }
+
     .firstBlock {
         display: flex;
         gap: 20px;
@@ -46,17 +44,10 @@
         }
     }
 
-    .thirdBlock {
-        padding: 20px;
-        display: flex;
-        gap: 5px
-    }
 }
 
 @media only screen and (min-width: 650px) {
-    .item {
-        grid-template-columns: 1fr 1fr 0.5fr;
-    }
+
     .thirdBlock {
         padding: 20px;
         display: flex;
@@ -65,3 +56,22 @@
     }
 }
 
+@media only screen and (max-width: 650px) {
+    .item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thirdBlock {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+        flex-direction: column;
+        /* grid-column: 1/4;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr; */
+        gap: 5px;
+        margin-bottom: 5px;
+        max-width: 90%;
+    }
+}
