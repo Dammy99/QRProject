@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
+import Button from "../Buttons/ProjButton/ProjButton";
 
 const Header: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,13 +23,18 @@ const Header: React.FC = () => {
     navigate(`/generation`);
   };
 
+  const handleHomeClick = () =>{
+    navigate(`/`);
+  }
+
   return (
     <>
       <header className={styles.header}>
         <div className={styles.tabs}>
-          <button onClick={handleStorageClick} className={styles.tab}>Склад</button>
-          <button onClick={handleOrgClick} className={styles.tab}>Налаштування організації</button>
-          <button onClick={handleGenerationClick} className={styles.tab}>Генерація QR коду</button>
+          <Button size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />
+          <Button size="small" hoverColor="orange" text="Склад" onClick={handleStorageClick }/>
+          <Button size="small" hoverColor="orange" text="Налаштування організації" onClick={handleOrgClick }/>
+          <Button size="small" hoverColor="orange" text="Генерація QR коду" onClick={handleGenerationClick }/>
         </div>
         {showMenu ? (
           <>
