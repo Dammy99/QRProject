@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Storage from "./pages/Storage/Storage";
 import Organization from "./components/Organization/Organization";
-import Generation from "./components/Generation/Generation";
+import Generation from "./pages/Generation/Generation";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/OrganizationHome/OrganizationHome";
 

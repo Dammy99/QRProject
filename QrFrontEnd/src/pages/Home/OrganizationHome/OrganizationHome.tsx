@@ -19,8 +19,6 @@ const OrganizationHome: React.FC = () => {
         setOpen(!open);
     };
 
-
-    
     return (
         <div className={styles.home}>
             <h1>Ласкаво просимо в {orgProps.name}</h1>
