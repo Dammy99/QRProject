@@ -3,8 +3,14 @@
         margin-right: 20px;
         cursor: pointer;
     }
+    .settings{
+        outline: none;
+        background: none;
+        margin-right: 20px;
+        border: none;
+        cursor:pointer;
+    }
 }
-
 
 @media screen and (min-width: 600px) {
     /* Сайт з градієнтом */
@@ -83,7 +89,6 @@
             background-color: rgb(91, 128, 160);
             border-radius: 5px;
         }
-
     }
 }
 
