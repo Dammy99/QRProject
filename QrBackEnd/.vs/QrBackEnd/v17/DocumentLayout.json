@@ -3,16 +3,127 @@
   "WorkspaceRootPath": "E:\\SelfStudy\\QRProject\\QrBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C22C333-7472-4531-B174-C3A75BBF6996}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C22C333-7472-4531-B174-C3A75BBF6996}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C22C333-7472-4531-B174-C3A75BBF6996}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C22C333-7472-4531-B174-C3A75BBF6996}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\implementation\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41E4C974-B198-4AEC-B371-8B7DA89A87EF}|ScanShow.Data\\ScanShow.Data.csproj|e:\\selfstudy\\qrproject\\qrbackend\\scanshow.data\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41E4C974-B198-4AEC-B371-8B7DA89A87EF}|ScanShow.Data\\ScanShow.Data.csproj|solutionrelative:scanshow.data\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\helpers\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|solutionrelative:qrproject.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\extentions\\extensionswrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\extentions\\extensionswrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\extentions\\iextensionswrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\extentions\\iextensionswrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\implementation\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.data\\entities\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|solutionrelative:qrproject.data\\entities\\organization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.data\\entities\\storageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|solutionrelative:qrproject.data\\entities\\storageitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\dtos\\organizationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\dtos\\organizationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\implementation\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\implementation\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\controllers\\organizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\controllers\\organizationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\interfaces\\istorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\interfaces\\istorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\configuration\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\configuration\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\implementation\\organizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\implementation\\organizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\services\\interfaces\\iorganizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\services\\interfaces\\iorganizationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\helpers\\storageitemhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\helpers\\storageitemhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\dtos\\storageitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\dtos\\storageitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrbackend\\qrbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2068CA24-E922-49CD-9EFC-6F8844926FE5}|QrBackEnd\\QrBackEnd.csproj|solutionrelative:qrbackend\\qrbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.data\\qrproject.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D91C2E06-48E9-41D0-B487-829082CE7AFE}|QrProject.Data\\QrProject.Data.csproj|solutionrelative:qrproject.data\\qrproject.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|e:\\selfstudy\\qrproject\\qrbackend\\qrproject.domain\\qrproject.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0B4DB7D8-B163-4EB3-808B-E8014AB8F6FC}|QrProject.Domain\\QrProject.Domain.csproj|solutionrelative:qrproject.domain\\qrproject.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +133,407 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "QrBackEnd\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "QrBackEnd\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Interfaces\\IAuthService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T22:53:06.107Z",
+              "WhenOpened": "2024-05-19T22:09:16.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\ScanShow.Data\\Class1.cs",
-              "RelativeDocumentMoniker": "ScanShow.Data\\Class1.cs",
-              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\ScanShow.Data\\Class1.cs",
-              "RelativeToolTip": "ScanShow.Data\\Class1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "IExtensionsWrapper.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Extentions\\IExtensionsWrapper.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Extentions\\IExtensionsWrapper.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Extentions\\IExtensionsWrapper.cs",
+              "RelativeToolTip": "QrProject.Domain\\Extentions\\IExtensionsWrapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T22:52:42.871Z",
+              "WhenOpened": "2024-05-19T20:11:33.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\UserService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Implementation\\UserService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\UserService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Implementation\\UserService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAhwB8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T21:10:26.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExtensionsWrapper.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Extentions\\ExtensionsWrapper.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Extentions\\ExtensionsWrapper.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Extentions\\ExtensionsWrapper.cs",
+              "RelativeToolTip": "QrProject.Domain\\Extentions\\ExtensionsWrapper.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAnwBEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T20:12:06.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JwtHelper.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Helpers\\JwtHelper.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Helpers\\JwtHelper.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Helpers\\JwtHelper.cs",
+              "RelativeToolTip": "QrProject.Domain\\Helpers\\JwtHelper.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAawB8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:58:13.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "QrBackEnd\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "QrBackEnd\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAA5wBoAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T20:37:33.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "QrBackEnd\\Controllers\\UserController.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\UserController.cs",
+              "RelativeToolTip": "QrBackEnd\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAhwBIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:07:37.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StorageItem.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\Entities\\StorageItem.cs",
+              "RelativeDocumentMoniker": "QrProject.Data\\Entities\\StorageItem.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\Entities\\StorageItem.cs",
+              "RelativeToolTip": "QrProject.Data\\Entities\\StorageItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T14:58:23.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Program.cs",
               "RelativeDocumentMoniker": "QrBackEnd\\Program.cs",
               "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Program.cs",
               "RelativeToolTip": "QrBackEnd\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAzAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAuwCgAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T22:49:49.376Z",
+              "WhenOpened": "2024-05-19T17:27:28.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T21:10:31.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "QrProject.Data\\Entities\\User.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\Entities\\User.cs",
+              "RelativeToolTip": "QrProject.Data\\Entities\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T19:08:03.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Organization.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\Entities\\Organization.cs",
+              "RelativeDocumentMoniker": "QrProject.Data\\Entities\\Organization.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\Entities\\Organization.cs",
+              "RelativeToolTip": "QrProject.Data\\Entities\\Organization.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T22:18:18.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrganizationDto.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Dtos\\OrganizationDto.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Dtos\\OrganizationDto.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Dtos\\OrganizationDto.cs",
+              "RelativeToolTip": "QrProject.Domain\\Dtos\\OrganizationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T22:18:10.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\AuthService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Implementation\\AuthService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\AuthService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Implementation\\AuthService.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAEwCQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T22:09:09.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "QrBackEnd\\appsettings.Development.json",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\appsettings.Development.json",
+              "RelativeToolTip": "QrBackEnd\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-19T20:20:17.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\appsettings.json",
+              "RelativeDocumentMoniker": "QrBackEnd\\appsettings.json",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\appsettings.json",
+              "RelativeToolTip": "QrBackEnd\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-19T20:18:13.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Configuration\\Configuration.cs",
+              "RelativeDocumentMoniker": "QrBackEnd\\Configuration\\Configuration.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Configuration\\Configuration.cs",
+              "RelativeToolTip": "QrBackEnd\\Configuration\\Configuration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T17:34:04.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IStorageService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IStorageService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Interfaces\\IStorageService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IStorageService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Interfaces\\IStorageService.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAMwAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T15:01:39.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\StorageService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Implementation\\StorageService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\StorageService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Implementation\\StorageService.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBcAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T15:01:45.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrganizationController.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\OrganizationController.cs",
+              "RelativeDocumentMoniker": "QrBackEnd\\Controllers\\OrganizationController.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\OrganizationController.cs",
+              "RelativeToolTip": "QrBackEnd\\Controllers\\OrganizationController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAIAwwCQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T17:27:31.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrganizationService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\OrganizationService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Implementation\\OrganizationService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Implementation\\OrganizationService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Implementation\\OrganizationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T21:23:54.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "QrBackEnd\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "QrBackEnd\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T22:19:40.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "StorageItemHelpers.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Helpers\\StorageItemHelpers.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Helpers\\StorageItemHelpers.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Helpers\\StorageItemHelpers.cs",
+              "RelativeToolTip": "QrProject.Domain\\Helpers\\StorageItemHelpers.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAwBsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T17:20:34.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IOrganizationService.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IOrganizationService.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Services\\Interfaces\\IOrganizationService.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Services\\Interfaces\\IOrganizationService.cs",
+              "RelativeToolTip": "QrProject.Domain\\Services\\Interfaces\\IOrganizationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAIAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T21:24:21.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StorageItemDto.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Dtos\\StorageItemDto.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Dtos\\StorageItemDto.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Dtos\\StorageItemDto.cs",
+              "RelativeToolTip": "QrProject.Domain\\Dtos\\StorageItemDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T16:48:26.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Dtos\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "QrProject.Domain\\Dtos\\RegisterDto.cs",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\Dtos\\RegisterDto.cs",
+              "RelativeToolTip": "QrProject.Domain\\Dtos\\RegisterDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-19T20:39:22.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Dockerfile",
+              "RelativeDocumentMoniker": "QrBackEnd\\Dockerfile",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\Dockerfile",
+              "RelativeToolTip": "QrBackEnd\\Dockerfile",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-18T22:14:21.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAFUTAAAAAAAAAAAvwGYTAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-05-19T17:57:13.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "QrProject.Domain",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\QrProject.Domain.csproj",
+              "RelativeDocumentMoniker": "QrProject.Domain\\QrProject.Domain.csproj",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Domain\\QrProject.Domain.csproj",
+              "RelativeToolTip": "QrProject.Domain\\QrProject.Domain.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-19T17:16:30.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "QrProject.Data",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\QrProject.Data.csproj",
+              "RelativeDocumentMoniker": "QrProject.Data\\QrProject.Data.csproj",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrProject.Data\\QrProject.Data.csproj",
+              "RelativeToolTip": "QrProject.Data\\QrProject.Data.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-19T17:16:32.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "QrBackEnd",
+              "DocumentMoniker": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\QrBackEnd.csproj",
+              "RelativeDocumentMoniker": "QrBackEnd\\QrBackEnd.csproj",
+              "ToolTip": "E:\\SelfStudy\\QRProject\\QrBackEnd\\QrBackEnd\\QrBackEnd.csproj",
+              "RelativeToolTip": "QrBackEnd\\QrBackEnd.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-19T17:16:33.132Z",
               "EditorCaption": ""
             }
           ]

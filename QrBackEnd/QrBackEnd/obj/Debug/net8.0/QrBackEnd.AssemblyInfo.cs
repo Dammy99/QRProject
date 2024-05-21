@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ae6e0d19-4dc9-4768-a4cb-de260b4ed024")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("QrBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd46f45ec917beb574160e449bab34e18a7425c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b36513aed88c76eb32caa5d787eb3ae6718d376")]
 [assembly: System.Reflection.AssemblyProductAttribute("QrBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QrBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
