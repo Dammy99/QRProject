@@ -10,7 +10,7 @@ namespace QrProject.Domain.Services.Implementation
     {
         public async Task<string> LoginUserAsync(RegisterLoginDto userLoginDto)
         {
-            var user = await _client.GetAsync($"Users/{userLoginDto.Email}");
+            var user = await _client.GetAsync($"Users/{userLoginDto.Name}");
 
             if (user.Body == "null")
             {

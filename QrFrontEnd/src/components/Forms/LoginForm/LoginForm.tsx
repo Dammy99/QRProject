@@ -3,7 +3,7 @@ import styles from "./LoginForm.module.css";
 import LoginButton from "../../Buttons/ProjButton/ProjButton";
 import TextInput from "../../Input/PasswordInput";
 import { UserContext, UserContextType } from "../../../App";
-import { loginUser } from "../../../apis/apis";
+import { getUser, loginUser } from "../../../apis/apis";
 
 interface RegisterProps {
   setOpen: () => void;
@@ -26,6 +26,7 @@ const LoginForm = (props: RegisterProps) => {
     event.preventDefault();
 
     const response = await loginUser(name, password);
+    await getUser(name);
 
     if (response) {
       setUser({ loggedIn: true, token: response});

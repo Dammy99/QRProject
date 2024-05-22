@@ -3,7 +3,7 @@ import styles from "./RegistrationForm.module.css";
 import RegisterButton from "../../Buttons/ProjButton/ProjButton";
 import TextInput from "../../Input/PasswordInput";
 import { UserContext, UserContextType } from "../../../App";
-import { registerUser } from "../../../apis/apis";
+import { getUser, registerUser } from "../../../apis/apis";
 interface RegisterProps {
   setOpen: () => void;
 }
@@ -50,7 +50,7 @@ const RegistrationForm = (props: RegisterProps) => {
       return;
     }
     const response = await registerUser(name, password);
-
+    
     if (response != "") {
       setUser({ loggedIn: true, token: response});
     }

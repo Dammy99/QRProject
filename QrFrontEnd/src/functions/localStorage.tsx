@@ -24,5 +24,9 @@ const getLocalStorageItems = () => {
     return JSON.parse(localStorage.getItem('items') || '[]');
   };
 
+const getLocalStorageUser = () => {
+  return JSON.parse(localStorage.getItem('user') || '{}');
+};
 
-export {addAndUpdateLocalStorage, getLocalStorageItems}
+
+export {addAndUpdateLocalStorage, getLocalStorageItems, getLocalStorageUser}

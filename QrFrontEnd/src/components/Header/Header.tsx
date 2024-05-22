@@ -77,6 +77,8 @@ const Header: React.FC = () => {
   //   </header>
   // ) : (
     <>
+    {/* Логін */}
+    {/* <LoginForm setOpen={handleOpenLogin} /> */}
       <header className={styles.header}>
         <div className={styles.tabs}>
           <Button transition size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />

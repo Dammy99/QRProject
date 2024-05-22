@@ -1,13 +1,13 @@
 import axios from "axios";
 
 interface RegisterLoginProps {
-  email: string;
+  name: string;
   password: string;
 }
 
-const registerUser = async (email:string, password:string) => {
+const registerUser = async (name:string, password:string) => {
   const registerLoginDto: RegisterLoginProps = {
-    email,
+    name,
     password,
   };
 
@@ -17,6 +17,7 @@ const registerUser = async (email:string, password:string) => {
       registerLoginDto
     );
     localStorage.setItem("access_token", response.data);
+    await getUser(registerLoginDto.name);
     return response.data;
   } catch (error) {
     alert(error);
@@ -24,9 +25,9 @@ const registerUser = async (email:string, password:string) => {
   }
 };
 
-const loginUser = async (email:string, password:string) => {
+const loginUser = async (name:string, password:string) => {
   const registerLoginDto: RegisterLoginProps = {
-    email,
+    name,
     password,
   };
 
@@ -57,7 +58,6 @@ const getOrgStorageCount = async (orgId: string) => {
           orgId: orgId,
         },
         headers:{
-            // Authorization: `Bearer ${localStorage.getItem("token")}`
             Authorization: `bearer ${token}`
         }
       }
@@ -68,6 +68,30 @@ const getOrgStorageCount = async (orgId: string) => {
     alert(error);
     return null;
   }
-
 };
-export { registerUser, loginUser, getOrgStorageCount };
+
+const getUser = async (name: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+
+    const response = await axios.get(
+      "https://localhost:7198/api/User/getUser",
+      { 
+        params: {
+          name: name,
+        },
+        headers:{
+            Authorization: `bearer ${token}`
+        }
+      }
+    );
+    localStorage.setItem("user", JSON.stringify(response.data));
+
+    return response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
+  }
+};
+export { registerUser, loginUser, getOrgStorageCount, getUser };

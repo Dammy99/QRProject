@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QrBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+885053676ffd7128b1ac8133dc02c22b5f6497c3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64f75c012fccdd5ad77ee87aa4e519fbaf92a891")]
 [assembly: System.Reflection.AssemblyProductAttribute("QrBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QrBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

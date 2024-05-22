@@ -12,7 +12,7 @@ namespace QrProject.Domain.Services.Implementation
 {
     public class UserService : IUserService
     {
-        public async Task<UserDto> GetUserByOrgId(string name)
+        public async Task<UserDto> GetUserByName(string name)
         {
             var userSearch = (await _client.GetAsync($"Users/{name}")).ResultAs<User>();
 
@@ -26,7 +26,7 @@ namespace QrProject.Domain.Services.Implementation
 
         public async Task<string> CreateUserAsync(RegisterLoginDto userRegisterDto)
         {
-            var userSearch = await _client.GetAsync($"Users/{userRegisterDto.Email}");
+            var userSearch = await _client.GetAsync($"Users/{userRegisterDto.Name}");
 
             if (userSearch.Body != "null")
             {
@@ -38,12 +38,12 @@ namespace QrProject.Domain.Services.Implementation
             var user = new User
             {
                 Id = Guid.NewGuid(),
-                Name = userRegisterDto.Email,
+                Name = userRegisterDto.Name,
                 PasswordHash = passwordHash,
                 OrgId = Guid.Empty,
             };
 
-            await _client.SetAsync($"Users/{userRegisterDto.Email}", user);
+            await _client.SetAsync($"Users/{userRegisterDto.Name}", user);
 
             return _extensionsWrapper.GetJwtToken(user);
         }

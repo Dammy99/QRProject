@@ -3,34 +3,28 @@ import RegistrationForm from '../../../components/Forms/RegistrationForm/Registr
 import styles from "./OrganizationHome.module.css"
 import Button from '../../../components/Buttons/ProjButton/ProjButton';
 import { getOrgStorageCount } from '../../../apis/apis';
+import { getLocalStorageUser } from '../../../functions/localStorage';
 
-interface OrganizationProps {
+interface UserDto{
+    id: string,
     name: string,
-    amountOfProducts: number
-}
-
-const orgProps: OrganizationProps = {
-    name: "Nazar's Organization",
-    amountOfProducts: 3
+    orgId: string
 }
 
 const OrganizationHome: React.FC = () => {
     const [count, setCount] = useState(0);
+    const [user, setUser] = useState<UserDto>();
     useEffect(() => {
+
         getOrgStorageCount("1").then((data) => {
             setCount(data);
         });
+        setUser(getLocalStorageUser());
     }, []);
-
-    // useEffect(()=>{
-    //     const token = window.localStorage.getItem('access_token');
-    //     if(!user)
-    //       getUser(token, setUser)
-    //   },[user]);
 
     return (
         <div className={styles.home}>
-            <h1>Ласкаво просимо в {orgProps.name}</h1>
+            <h1>Ласкаво просимо в {user?.name}</h1>
             <p>Загалом в організації зареєстровано {count} продукт/и/ів</p>
             <p>This is the home page of our site.</p>
         </div>
