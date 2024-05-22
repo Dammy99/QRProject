@@ -13,13 +13,12 @@ interface UserDto{
 
 const OrganizationHome: React.FC = () => {
     const [count, setCount] = useState(0);
-    const [user, setUser] = useState<UserDto>();
+    const [user] = useState<UserDto>(getLocalStorageUser());
     useEffect(() => {
 
-        getOrgStorageCount("1").then((data) => {
+        getOrgStorageCount(user.orgId).then((data) => {
             setCount(data);
         });
-        setUser(getLocalStorageUser());
     }, []);
 
     return (
