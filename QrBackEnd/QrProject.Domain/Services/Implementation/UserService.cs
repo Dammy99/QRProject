@@ -14,6 +14,13 @@ namespace QrProject.Domain.Services.Implementation
     {
         public async Task<string> CreateUserAsync(RegisterLoginDto userRegisterDto)
         {
+            var userSearch = await _client.GetAsync($"Users/{userRegisterDto.Email}");
+
+            if (userSearch.Body != "null")
+            {
+                throw new Exception("User already exists");
+            }
+
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(userRegisterDto.Password);
 
             var user = new User

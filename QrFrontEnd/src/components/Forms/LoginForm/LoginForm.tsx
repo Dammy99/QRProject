@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./LoginForm.module.css";
 import LoginButton from "../../Buttons/ProjButton/ProjButton";
 import TextInput from "../../Input/PasswordInput";
+import { UserContext, UserContextType } from "../../../App";
+import { loginUser } from "../../../apis/apis";
 
 interface RegisterProps {
   setOpen: () => void;
@@ -10,6 +12,7 @@ interface RegisterProps {
 const LoginForm = (props: RegisterProps) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const { setUser } = useContext<UserContextType>(UserContext);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -19,8 +22,14 @@ const LoginForm = (props: RegisterProps) => {
     setPassword(event.target.value);
   };
   
-  const handleSubmit = () =>{
-    // тут якийсь api кол для логіну
+  const handleSubmit =  async (event: React.FormEvent) =>{
+    event.preventDefault();
+
+    const response = await loginUser(name, password);
+
+    if (response) {
+      setUser({ loggedIn: true, token: response});
+    }
   }
 
   return (

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./RegistrationForm.module.css";
 import RegisterButton from "../../Buttons/ProjButton/ProjButton";
 import TextInput from "../../Input/PasswordInput";
-
+import { UserContext, UserContextType } from "../../../App";
+import { registerUser } from "../../../apis/apis";
 interface RegisterProps {
   setOpen: () => void;
 }
@@ -11,6 +12,7 @@ const RegistrationForm = (props: RegisterProps) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [correctPassword, setCorrectPassword] = useState("");
+  const { setUser } = useContext<UserContextType>(UserContext);
 
   const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
@@ -26,7 +28,7 @@ const RegistrationForm = (props: RegisterProps) => {
     setCorrectPassword(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (name.length < 3) {
       alert("Ім'я повинно містити не менше 3 символів");
@@ -47,7 +49,13 @@ const RegistrationForm = (props: RegisterProps) => {
       alert("Паролі не співпадають");
       return;
     }
+    const response = await registerUser(name, password);
+
+    if (response != "") {
+      setUser({ loggedIn: true, token: response});
+    }
   };
+
 
   return (
     <section className={styles.page}>

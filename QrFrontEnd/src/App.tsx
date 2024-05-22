@@ -7,25 +7,24 @@ import Storage from "./pages/Storage/Storage";
 import Organization from "./components/Organization/Organization";
 import Generation from "./pages/Generation/Generation";
 import Footer from "./components/Footer/Footer";
-import Home from "./pages/Home/OrganizationHome/OrganizationHome";
+import Home from "./pages/Home/MainHome/MainHome";
 import WelcomePage from "./pages/Welcome/WelcomePage";
 import ProtectedRoutes from "./functions/routerProtector";
 
 interface User {
   loggedIn: boolean;
+  token?: string;
 }
 
-interface UserContextType {
+export interface UserContextType {
   user: User;
   setUser: (user: User) => void;
 }
 
-export const UserContext = createContext<UserContextType | undefined>(
-  undefined
-);
+export const UserContext = createContext<UserContextType>({} as UserContextType);
 
 function App() {
-  const [user, setUser] = useState<User>({ loggedIn: false });
+  const [user, setUser] = useState<User>({ loggedIn: false, token: "" });
   return (
     <>
       <UserContext.Provider value={{ user, setUser }}>
