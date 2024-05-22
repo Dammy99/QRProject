@@ -31,14 +31,12 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          {/* <Route element={<ProtectedRoutes />}> */}
+          <Route element={<ProtectedRoutes />}>
             <Route path="/storage" element={<Storage />}></Route>
             <Route path="/organization" element={<Organization />}></Route>
             <Route path="/generation" element={<Generation />}></Route>
             <Route path="/welcome" element={<WelcomePage />}></Route>
-          {/* </Route> */}
-          {/* <Route path="/" element={<Home />}></Route>
-        <Route path="/price/:pricesPage" element={<Price />}></Route> */}
+          </Route>
         </Routes>
         <Footer />
       </UserContext.Provider>

@@ -60,22 +60,21 @@ const Header: React.FC = () => {
     setLoginOpen(!isLoginOpen);
   };
 
-  return (
-  // !isAuth ? 
-  //   <header className={styles.header}>
-  //     <div className={styles.unauth}>
-  //       <h3>QR-code NazDev</h3>
-  //       <div className={styles.buttons}>
-  //         <Button size="none" text='Реєстрація' hoverBackgroundColor="green" backgroundColor="#23a923" color='black' onClick={handleOpenRegister} />
-  //         <Button size="none" text='Логін' backgroundColor="#008eff" color='black' onClick={handleOpenLogin} />
-  //       </div>
+  return !isAuth ? ( 
+    <header className={styles.header}>
+      <div className={styles.unauth}>
+        <h3>QR-code NazDev</h3>
+        <div className={styles.buttons}>
+          <Button size="none" text='Реєстрація' hoverBackgroundColor="green" backgroundColor="#23a923" color='black' onClick={handleOpenRegister} />
+          <Button size="none" text='Логін' backgroundColor="#008eff" color='black' onClick={handleOpenLogin} />
+        </div>
 
-  //       {isRegisterOpen && <RegistrationForm setOpen={handleOpenRegister} />}
-  //       {isLoginOpen && <LoginForm setOpen={handleOpenLogin} />}
+        {isRegisterOpen && <RegistrationForm setOpen={handleOpenRegister} />}
+        {isLoginOpen && <LoginForm setOpen={handleOpenLogin} />}
         
-  //     </div>
-  //   </header>
-  // ) : (
+      </div>
+    </header>
+  ) : (
     <>
     {/* Логін */}
     {/* <LoginForm setOpen={handleOpenLogin} /> */}
@@ -105,11 +104,44 @@ const Header: React.FC = () => {
         <button onClick={handleMenuClick} className={styles.settings} >
           <Icon icon={icon} size={40}/>
         </button>
-        {/* <Button margin="20px" backgroundColor="grey" size="small" text="Settings" onClick={handleMenuClick} /> */}
-        
       </header>
     </>
   );
+
+
+  // (
+  //   <>
+  //   {/* Логін */}
+  //   {/* <LoginForm setOpen={handleOpenLogin} /> */}
+  //     <header className={styles.header}>
+  //       <div className={styles.tabs}>
+  //         <Button transition size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />
+  //         <Button transition size="small" hoverColor="orange" text="Склад" onClick={handleStorageClick }/>
+  //         <Button transition size="small" hoverColor="orange" text="Налаштування організації" onClick={handleOrgClick }/>
+  //         <Button transition size="small" hoverColor="orange" text="Генерація QR коду" onClick={handleGenerationClick }/>
+  //       </div>
+  //       {showMenu ? (
+  //         <>
+  //           <div className={styles.menu}>
+  //             <Button transition size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />
+  //             <Button transition size="small" hoverColor="orange" text="Склад" onClick={handleStorageClick }/>
+  //             <Button transition size="small" hoverColor="orange" text="Налаштування організації" onClick={handleOrgClick }/>
+  //             <Button transition size="small" hoverColor="orange" text="Генерація QR коду" onClick={handleGenerationClick }/>
+  //             <Button hoverColor="white" size="small" text="Вихід" onClick={handleExit} />
+  //           </div>
+  //           <div className={styles.smallMenu}>
+  //             <Button hoverColor="white" size="small" text="Вихід" onClick={handleExit} />
+  //           </div>
+  //         </>
+  //       ) : (
+  //         <></>
+  //       )}
+  //       <button onClick={handleMenuClick} className={styles.settings} >
+  //         <Icon icon={icon} size={40}/>
+  //       </button>
+  //     </header>
+  //   </>
+  // );
 };
 
 export default Header;
