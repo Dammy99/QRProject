@@ -5,11 +5,17 @@ import Button from "../Buttons/ProjButton/ProjButton";
 import {ic_settings} from 'react-icons-kit/md/ic_settings'
 import {ic_settings_outline} from 'react-icons-kit/md/ic_settings_outline'
 import { Icon } from "react-icons-kit";
+import { useAuth } from "../../functions/routerProtector";
+import RegistrationForm from "../Forms/RegistrationForm/RegistrationForm";
+import LoginForm from "../Forms/LoginForm/LoginForm";
 
 const Header: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [icon, setIcon] = useState(ic_settings);
+  const [isRegisterOpen, setRegisterOpen] = useState(false);
+  const [isLoginOpen, setLoginOpen] = useState(false);
 
+  const isAuth = useAuth();
   const navigate = useNavigate();
 
   const handleMenuClick = () => {
@@ -22,23 +28,53 @@ const Header: React.FC = () => {
     setShowMenu(!showMenu);
   };
 
+  const handleExit = () => {
+    confirm("Exit?");
+  }
+
   const handleStorageClick = () => {
     navigate(`/storage`);
+    handleMenuClick();
   };
 
   const handleOrgClick = () => {
     navigate(`/organization`);
+    handleMenuClick();
   };
 
   const handleGenerationClick = () => {
     navigate(`/generation`);
+    handleMenuClick();
   };
 
   const handleHomeClick = () =>{
     navigate(`/`);
+    handleMenuClick();
   }
 
-  return (
+  const handleOpenRegister = () => {
+    setRegisterOpen(!isRegisterOpen);
+  };
+
+  const handleOpenLogin = () => {
+    setLoginOpen(!isLoginOpen);
+  };
+
+  return !isAuth ? (
+    <header className={styles.header}>
+      <div className={styles.unauth}>
+        <h3>QR-code NazDev</h3>
+        <div className={styles.buttons}>
+          <Button size="none" text='Реєстрація' hoverBackgroundColor="green" backgroundColor="#23a923" color='black' onClick={handleOpenRegister} />
+          <Button size="none" text='Логін' backgroundColor="#008eff" color='black' onClick={handleOpenLogin} />
+        </div>
+
+        {isRegisterOpen && <RegistrationForm setOpen={handleOpenRegister} />}
+        {isLoginOpen && <LoginForm setOpen={handleOpenLogin} />}
+        
+      </div>
+    </header>
+  ) : (
     <>
       <header className={styles.header}>
         <div className={styles.tabs}>
@@ -50,16 +86,14 @@ const Header: React.FC = () => {
         {showMenu ? (
           <>
             <div className={styles.menu}>
-              <div className={styles.menuItem}>Склад</div>
-              <div className={styles.menuItem}>Налаштування організації</div>
-              <div className={styles.menuItem}>Генерація QR коду</div>
-              <div className={styles.menuItem}>Log Out</div>
+              <Button transition size="small" hoverColor="orange" text="Домашня" onClick={handleHomeClick} />
+              <Button transition size="small" hoverColor="orange" text="Склад" onClick={handleStorageClick }/>
+              <Button transition size="small" hoverColor="orange" text="Налаштування організації" onClick={handleOrgClick }/>
+              <Button transition size="small" hoverColor="orange" text="Генерація QR коду" onClick={handleGenerationClick }/>
+              <Button hoverColor="white" size="small" text="Вихід" onClick={handleExit} />
             </div>
             <div className={styles.smallMenu}>
-              <button className={styles.menuItem}>
-                Log Out
-              </button>
-              <div className={styles.menuItem}>Log Out</div>
+              <Button hoverColor="white" size="small" text="Вихід" onClick={handleExit} />
             </div>
           </>
         ) : (
@@ -69,6 +103,7 @@ const Header: React.FC = () => {
           <Icon icon={icon} size={40}/>
         </button>
         {/* <Button margin="20px" backgroundColor="grey" size="small" text="Settings" onClick={handleMenuClick} /> */}
+        
       </header>
     </>
   );

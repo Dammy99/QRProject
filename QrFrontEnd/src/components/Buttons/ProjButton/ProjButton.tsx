@@ -1,7 +1,7 @@
 import React, { MouseEventHandler } from "react";
 
 interface ButtonProps {
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium" | "large" | "none";
   backgroundColor?: string;
   color?: string;
   text: string;
@@ -39,7 +39,9 @@ const Button: React.FC<ButtonProps> = ({
         ? "8px 16px"
         : size === "medium"
         ? "12px 24px"
-        : "16px 32px",
+        : size === "large"
+        ? "16px 32px"
+        : "none",
     backgroundColor: backgroundColor ?? "transparent",
     outline: outline ?? "none",
     color: color ?? "black",
