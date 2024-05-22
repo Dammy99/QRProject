@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/QrBackEnd/QrBackEnd/obj/Debug/net8.0/QrBackEnd.csproj.AssemblyReference.cache
+/QrBackEnd/QrBackEnd/obj/Debug/net8.0/QrBackEnd.AssemblyInfoInputs.cache
+/QrBackEnd/.vs/ProjectEvaluation/qrbackend.metadata.v7.bin
+/QrBackEnd/.vs/ProjectEvaluation/qrbackend.projects.v7.bin
+/QrBackEnd/.vs/QrBackEnd/DesignTimeBuild/.dtbcache.v2
