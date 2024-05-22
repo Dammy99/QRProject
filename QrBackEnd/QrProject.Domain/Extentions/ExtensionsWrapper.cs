@@ -15,7 +15,7 @@ namespace QrProject.Domain.Extentions
 
         public string GetJwtToken(User user)
         {
-            return _configuration.GenerateJwtToken(user.Email, "User");
+            return _configuration.GenerateJwtToken(user.Name, "User");
         }
     }
 }

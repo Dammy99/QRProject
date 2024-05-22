@@ -1,6 +1,0 @@
-@QrBackEnd_HostAddress = http://localhost:5232
-
-GET {{QrBackEnd_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

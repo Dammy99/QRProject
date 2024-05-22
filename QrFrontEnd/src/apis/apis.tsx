@@ -16,13 +16,11 @@ const registerUser = async (email:string, password:string) => {
       "https://localhost:7198/api/Auth/register",
       registerLoginDto
     );
-    
+    localStorage.setItem("access_token", response.data);
     return response.data;
-    // Handle successful response
   } catch (error) {
     alert(error);
     return null;
-    // Handle error response
   }
 };
 
@@ -37,15 +35,39 @@ const loginUser = async (email:string, password:string) => {
       "https://localhost:7198/api/Auth/login",
       registerLoginDto
     );
-    
+    localStorage.setItem("access_token", response.data);
     return response.data;
-    // Handle successful response
   } catch (error) {
     alert(error);
     return null;
-    // Handle error response
+  }
+};
+
+
+//-------------------------------------------------------------------------------------------
+
+const getOrgStorageCount = async (orgId: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+
+    const response = await axios.get(
+      "https://localhost:7198/api/Organization/getOrgStorageCount",
+      { 
+        params: {
+          orgId: orgId,
+        },
+        headers:{
+            // Authorization: `Bearer ${localStorage.getItem("token")}`
+            Authorization: `bearer ${token}`
+        }
+      }
+    );
+    return response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
   }
 
 };
-
-export { registerUser, loginUser };
+export { registerUser, loginUser, getOrgStorageCount };

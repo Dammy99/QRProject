@@ -10,6 +10,14 @@ namespace QrBackEnd.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        [HttpGet("getUser"), Authorize]
+        [ProducesResponseType<UserDto>(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetUser(string user)
+        {
+            return Ok(await _userService.GetUserByName(user));
+        }
+
         [HttpPost("createOrg"), Authorize]
         [ProducesResponseType<OrganizationDto>(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

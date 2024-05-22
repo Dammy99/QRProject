@@ -12,6 +12,18 @@ namespace QrProject.Domain.Services.Implementation
 {
     public class UserService : IUserService
     {
+        public async Task<UserDto> GetUserByOrgId(string name)
+        {
+            var userSearch = (await _client.GetAsync($"Users/{name}")).ResultAs<User>();
+
+            return new UserDto()
+            {
+                Id = userSearch.Id,
+                Name = userSearch.Name,
+                OrgId = userSearch.OrgId,
+            };
+        }
+
         public async Task<string> CreateUserAsync(RegisterLoginDto userRegisterDto)
         {
             var userSearch = await _client.GetAsync($"Users/{userRegisterDto.Email}");
@@ -26,7 +38,7 @@ namespace QrProject.Domain.Services.Implementation
             var user = new User
             {
                 Id = Guid.NewGuid(),
-                Email = userRegisterDto.Email,
+                Name = userRegisterDto.Email,
                 PasswordHash = passwordHash,
                 OrgId = Guid.Empty,
             };
@@ -64,6 +76,7 @@ namespace QrProject.Domain.Services.Implementation
             await _client.UpdateAsync($"Users/{userEmail}", user);
             return organization.ToDto();
         }
+
 
         public UserService(IConfiguration configuration, IFirebaseClient client, IAuthService authService)
         {

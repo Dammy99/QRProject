@@ -8,5 +8,6 @@ namespace QrProject.Domain.Services.Interfaces
         Task<string> CreateUserAsync(RegisterLoginDto userRegisterDto);
         Task<string> LoginUserAsync(RegisterLoginDto userLoginDto);
         Task<OrganizationDto> CreateOrganization(string userEmail, string orgName);
+        Task<UserDto> GetUserByName(string name);
     }
 }

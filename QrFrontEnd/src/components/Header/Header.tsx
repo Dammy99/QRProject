@@ -50,7 +50,7 @@ const Header: React.FC = () => {
   const handleHomeClick = () =>{
     navigate(`/`);
     handleMenuClick();
-  }
+  };
 
   const handleOpenRegister = () => {
     setRegisterOpen(!isRegisterOpen);
@@ -60,21 +60,22 @@ const Header: React.FC = () => {
     setLoginOpen(!isLoginOpen);
   };
 
-  return !isAuth ? (
-    <header className={styles.header}>
-      <div className={styles.unauth}>
-        <h3>QR-code NazDev</h3>
-        <div className={styles.buttons}>
-          <Button size="none" text='Реєстрація' hoverBackgroundColor="green" backgroundColor="#23a923" color='black' onClick={handleOpenRegister} />
-          <Button size="none" text='Логін' backgroundColor="#008eff" color='black' onClick={handleOpenLogin} />
-        </div>
+  return (
+  // !isAuth ? 
+  //   <header className={styles.header}>
+  //     <div className={styles.unauth}>
+  //       <h3>QR-code NazDev</h3>
+  //       <div className={styles.buttons}>
+  //         <Button size="none" text='Реєстрація' hoverBackgroundColor="green" backgroundColor="#23a923" color='black' onClick={handleOpenRegister} />
+  //         <Button size="none" text='Логін' backgroundColor="#008eff" color='black' onClick={handleOpenLogin} />
+  //       </div>
 
-        {isRegisterOpen && <RegistrationForm setOpen={handleOpenRegister} />}
-        {isLoginOpen && <LoginForm setOpen={handleOpenLogin} />}
+  //       {isRegisterOpen && <RegistrationForm setOpen={handleOpenRegister} />}
+  //       {isLoginOpen && <LoginForm setOpen={handleOpenLogin} />}
         
-      </div>
-    </header>
-  ) : (
+  //     </div>
+  //   </header>
+  // ) : (
     <>
       <header className={styles.header}>
         <div className={styles.tabs}>

@@ -9,5 +9,6 @@ namespace QrProject.Domain.Services.Interfaces
         Task<StorageItem> GetStorageItem(int id);
         Task UpsertStorageItem(StorageItemDto storageItemDto);
         Task DeleteStorageItem(StorageItemDto storageItemDto);
+        Task<int> GetStorageCount(string orgId);
     }
 }

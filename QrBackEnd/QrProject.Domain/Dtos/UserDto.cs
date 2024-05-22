@@ -1,10 +1,9 @@
-﻿namespace QrProject.Data.Entities
+﻿namespace QrProject.Domain.Dtos
 {
-    public class User
+    public class UserDto
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string PasswordHash { get; set; }
         public Guid? OrgId { get; set; }
     }
 }

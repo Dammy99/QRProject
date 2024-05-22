@@ -27,13 +27,13 @@ namespace QrBackEnd.Controllers
             return Ok(await _userService.CreateUserAsync(registerDto));
         }
 
-        public AuthController(ILogger<WeatherForecastController> logger, IUserService userService)
+        public AuthController(ILogger<OrganizationController> logger, IUserService userService)
         {
             _logger = logger;
             _userService = userService;
         }
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<OrganizationController> _logger;
         private readonly IUserService _userService;
     }
 }

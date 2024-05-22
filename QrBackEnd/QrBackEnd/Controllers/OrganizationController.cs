@@ -1,4 +1,5 @@
 ﻿using FireSharp.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QrProject.Data.Entities;
@@ -38,14 +39,23 @@ namespace QrBackEnd.Controllers
             return Ok();
         }
 
-        public OrganizationController(ILogger<WeatherForecastController> logger, IFirebaseClient client, IStorageService storageService)
+        [Authorize]
+        [HttpGet("getOrgStorageCount")]
+        [ProducesResponseType<int>(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetStorageCount(string orgId)
+        {
+            return Ok(await _storageService.GetStorageCount(orgId));
+        }
+
+        public OrganizationController(ILogger<OrganizationController> logger, IFirebaseClient client, IStorageService storageService)
         {
             _logger = logger;
             _client = client;
             _storageService = storageService;
         }
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<OrganizationController> _logger;
         private readonly IFirebaseClient _client;
         private readonly IStorageService _storageService;
     }

@@ -25,6 +25,16 @@ namespace QrProject.Domain.Services.Implementation
             return itemsList;
         }
 
+        public async Task<int> GetStorageCount(string orgId)
+        {
+            var items = await client.GetAsync("StorageItems/" + orgId);
+            if (items.Body == "null")
+            {
+                return 0;
+            };
+            return items.ResultAs<IDictionary<string, StorageItem>>().Values.Count;
+        }
+
         public async Task<StorageItem> GetStorageItem(int id)
         {
             throw new NotImplementedException();
