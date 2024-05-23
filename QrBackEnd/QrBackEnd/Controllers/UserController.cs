@@ -21,9 +21,9 @@ namespace QrBackEnd.Controllers
         [HttpPost("createOrg"), Authorize]
         [ProducesResponseType<OrganizationDto>(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> CreateOrganization(string userEmail, string orgName)
+        public async Task<IActionResult> CreateOrganization([FromBody] CreateOrganizationDto organizationDto)
         {
-            return Ok(await _userService.CreateOrganization(userEmail, orgName));
+            return Ok(await _userService.CreateOrganization(organizationDto.userEmail, organizationDto.orgName));
         }
 
         public UserController(IUserService userService)

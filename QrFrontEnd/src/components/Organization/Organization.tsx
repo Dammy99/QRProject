@@ -1,59 +1,32 @@
+import { useEffect, useState } from "react";
+import { getLocalStorageUser } from "../../functions/localStorage";
+import Button from "../Buttons/ProjButton/ProjButton";
 import styles from "./Organization.module.css";
-
-interface SubscriptionsProps {
-  name: string;
-  priceToBuy: number;
-  minQuantity: number;
-  owner: string;
-}
-
-interface OwnProductsProps {
-  name: string;
-  price: number;
-}
-
-// create a list of subscriptions
-const subscriptions: SubscriptionsProps[] = [
-  { name: "Subscription 1", priceToBuy: 100, minQuantity: 10, owner: "Owner 1" },
-  { name: "Subscription 2", priceToBuy: 150, minQuantity: 15, owner: "Owner 1" },
-  { name: "Subscription 3", priceToBuy: 200, minQuantity: 20, owner: "Owner 1" },
-];
-
-// create a list of own products
-const ownProducts: OwnProductsProps[] = [
-  { name: "Own product 1", price: 100 },
-  { name: "Own product 2", price: 150 },
-  { name: "Own product 3", price: 200 },
-];
+import CreateOrganizationForm from "../Forms/CreateOrganizationForm/CreateOrganization";
 
 const Organization = () => {
+  const [isCreateOrgOpen, setIsCreateOrgOpen] = useState<boolean>(false);
+  // const [isAddToOrgOpen, setIsAddToOrgOpen] = useState<boolean>(false);
+
+  const [isHaveOrg, setIsHaveOrg] = useState<boolean>(false);
+  useEffect(() => {
+    if (getLocalStorageUser().orgId !== "00000000-0000-0000-0000-000000000000") {
+      setIsHaveOrg(true);
+    }
+  }, []);
+
+  const handleCreateOrg = async () => {
+    setIsCreateOrgOpen(!isCreateOrgOpen);
+    setIsHaveOrg(true);
+  }
+
   return (
     <section className={styles.container}>
-      <h2>Organization settings</h2>
-      <div className={styles.subscriptions}>
-        <p>Subs</p>
-        <ul>
-          {subscriptions.map((subscription, index) => (
-            <li className={styles.item} key={index}>
-              <p>{subscription.name}</p>
-              <p>Price to buy: {subscription.priceToBuy}</p>
-              <p>Min quantity: {subscription.minQuantity}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <p>Own products</p>
-        <ul>
-          {ownProducts.map((product, index) => (
-            <li className={styles.item} key={index}>
-              <p>{product.name}</p>
-              <p>Price: {product.price}</p>
-            </li>
-          ))}
-        </ul>
-        <button>Add new product</button>
-      </div>
+      {!isHaveOrg && <Button onClick={handleCreateOrg} hoverBackgroundColor="#59d959" size="large" backgroundColor="#59d959" text="Створити організацію"/>}
+      <Button hoverBackgroundColor="#a3a3ed" size="large" backgroundColor="#8d8dd7" text="Добавити в організацію"/>
+      <Button hoverBackgroundColor="#ff1414" size="large" backgroundColor="orangered" text="Видалити організацію"/>
+
+      {isCreateOrgOpen && <CreateOrganizationForm setOpen={handleCreateOrg}/>}
     </section>
   );
 };

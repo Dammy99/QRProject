@@ -1,4 +1,6 @@
 import axios from "axios";
+import { ItemDto } from "../components/StorageItem/StorageItem";
+import { v4 as uuidv4 } from "uuid";
 
 interface RegisterLoginProps {
   name: string;
@@ -73,7 +75,6 @@ const getOrgStorageCount = async (orgId: string) => {
 const getUser = async (name: string) => {
   try {
     const token = window.localStorage.getItem('access_token');
-
     const response = await axios.get(
       "https://localhost:7198/api/User/getUser",
       { 
@@ -86,7 +87,6 @@ const getUser = async (name: string) => {
       }
     );
     localStorage.setItem("user", JSON.stringify(response.data));
-
     return response.data;
 
   } catch (error) {
@@ -94,4 +94,74 @@ const getUser = async (name: string) => {
     return null;
   }
 };
-export { registerUser, loginUser, getOrgStorageCount, getUser };
+
+
+// -------------------------------------------------------------------------------------------
+
+const getItems = async (id: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+    const response = await axios.get(
+      "https://localhost:7198/api/Organization/list",
+      { 
+        params: {
+          id: id,
+        },
+        headers:{
+            Authorization: `bearer ${token}`
+        }
+      }
+    );
+    return response.data === "" ? [] : response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
+  }
+};
+
+const postItems = async (storageItemDto: ItemDto) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+    storageItemDto.Id = uuidv4();
+    const response = await axios.post(
+      "https://localhost:7198/api/Organization/storageItem", storageItemDto,
+      {
+        headers:{
+            Authorization: `bearer ${token}`,
+        }
+      }
+    );
+    return response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
+  }
+};
+
+const createOrganization = async (userEmail :string, orgName: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+
+    const response = await axios.post(
+      "https://localhost:7198/api/User/createOrg",
+      {
+        userEmail: userEmail,
+        orgName: orgName
+      },
+      { 
+        headers: {
+            Authorization: `bearer ${token}`,
+        }
+      }
+    );
+    return response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
+  }
+};
+
+export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization};

@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import RegistrationForm from '../../../components/Forms/RegistrationForm/RegistrationForm';
 import styles from "./OrganizationHome.module.css"
-import Button from '../../../components/Buttons/ProjButton/ProjButton';
 import { getOrgStorageCount } from '../../../apis/apis';
 import { getLocalStorageUser } from '../../../functions/localStorage';
-
-interface UserDto{
-    id: string,
-    name: string,
-    orgId: string
-}
+import { LocalStorageUser } from '../../../interfaces/interfaces';
 
 const OrganizationHome: React.FC = () => {
     const [count, setCount] = useState(0);
-    const [user] = useState<UserDto>(getLocalStorageUser());
+    const [user] = useState<LocalStorageUser>(getLocalStorageUser());
     useEffect(() => {
 
         getOrgStorageCount(user.orgId).then((data) => {

@@ -12,6 +12,7 @@ namespace QrBackEnd.Controllers
     [ApiController]
     public class OrganizationController : ControllerBase
     {
+        [Authorize]
         [HttpGet("list")]
         [ProducesResponseType<IReadOnlyList<StorageItem>>(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -21,6 +22,7 @@ namespace QrBackEnd.Controllers
             return Ok(list);
         }
 
+        [Authorize]
         [HttpPost("storageItem")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -29,7 +31,8 @@ namespace QrBackEnd.Controllers
             await _storageService.UpsertStorageItem(storageItemDto);
             return Ok();
         }
-
+        
+        [Authorize]
         [HttpDelete("storageItem")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

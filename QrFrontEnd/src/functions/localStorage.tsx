@@ -1,14 +1,16 @@
-const addAndUpdateLocalStorage = (id: number, count: number, imageSrc: string) => {
+import { LocalStorageUser } from "../interfaces/interfaces";
+
+const addAndUpdateLocalStorage = (id: string, count: number, imageSrc: string) => {
     const items = getLocalStorageItems();
     if (count === 0) {
       // Видаляємо елемент, якщо count рівний нулю
-      const updatedItems = items.filter((item: { id: number }) => item.id !== id);
+      const updatedItems = items.filter((item: { id: string }) => item.id !== id);
       localStorage.setItem('items', JSON.stringify(updatedItems));
       if (updatedItems.length === 0) {
         localStorage.removeItem('items');
       }
     } else {
-      const index = items.findIndex((item: { id: number }) => item.id === id);
+      const index = items.findIndex((item: { id: string }) => item.id === id);
       if (index !== -1) {
         // Оновлюємо існуючий елемент, якщо він знайдений
         items[index] = { id, count, imageSrc };
@@ -24,8 +26,9 @@ const getLocalStorageItems = () => {
     return JSON.parse(localStorage.getItem('items') || '[]');
   };
 
-const getLocalStorageUser = () => {
-  return JSON.parse(localStorage.getItem('user') || '{}');
+const getLocalStorageUser = (): LocalStorageUser => {
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+  return user;
 };
 
 

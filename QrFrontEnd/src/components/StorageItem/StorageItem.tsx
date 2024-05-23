@@ -3,8 +3,20 @@ import styles from "./StorageItem.module.css";
 import Button from "../Buttons/ProjButton/ProjButton";
 import Counter from "../Counter/Counter";
 import {addAndUpdateLocalStorage} from "../../functions/localStorage";
+export interface ItemDto {
+  Id: string;
+  OrgId: string;
+  Quantity: number;
+  Name: string;
+  Details: string;
+  PricePerOne: number;
+  Image?: string;
+  Code: string;
+  Category: string;
+}
+
 export interface ItemProps {
-  id: number;
+  id: string;
   quantity: number;
   name: string;
   details: string;
@@ -25,9 +37,9 @@ const StorageItem: React.FC<ItemProps> = ({
   category,
 }) => {
 
-  const [counts, setCounts] = useState<{ [key: number]: number }>({});
+  const [counts, setCounts] = useState<{ [key: string]: number }>({});
 
-  const handleCountChange = (id: number, count: number) => {
+  const handleCountChange = (id: string, count: number) => {
     setCounts(prevCounts => ({ ...prevCounts, [id]: count }));
   };
 

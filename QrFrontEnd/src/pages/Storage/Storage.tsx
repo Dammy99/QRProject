@@ -1,39 +1,36 @@
-import React from 'react';
-import { ItemProps } from '../../components/Item/Item';
+import React, { useEffect, useState } from 'react';
 import styles from './Storage.module.css';
 import Button from '../../components/Buttons/ProjButton/ProjButton';
-import StorageItem from '../../components/StorageItem/StorageItem';
-// import { useNavigate } from 'react-router-dom';
-// import DetailItem from './../DetailItem/DetailItem';
+import StorageItem, { ItemProps } from '../../components/StorageItem/StorageItem';
+import StorageItemForm from '../../components/Forms/CreateStorageItemForm/CreateStorageItemForm';
+import { getItems } from '../../apis/apis';
+import { getLocalStorageUser } from '../../functions/localStorage';
 
-// interface ItemData {
-//     id: number;
-//     name: string;
-//     quantity: number;
-//     details: string;
-//     price: number;
-// }
 
 const Storage: React.FC = () => {
-    // const history = useNavigate();
+    const [isAddItemOpen, setIsAddItemOpen] = useState<boolean>(false);
+    const [items, setItems] = useState<ItemProps[]>([]);
+    const [isPosted, setIsPosted] = useState<boolean>(false);
+    useEffect(() => {
+        const fetchItems = async () => {
+            const orgId = getLocalStorageUser().orgId;
+            const items = await getItems(orgId);
+            setItems(items);
+        };
+        fetchItems();
+        setIsPosted(false);
+    }, [isPosted]);
 
-    // Sample list of items
-    const items: ItemProps[] = [
-        { id: 1, code: "1", image:'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg', name: 'Item 1', quantity: 5, details: 'Details 1', pricePerOne: 10, category:"category 1" },
-        { id: 2, code: "2", image:'https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg', name: 'Item 2', quantity: 3, details: 'Details 2', pricePerOne: 15, category:"category 2" },
-        { id: 3, code: "3", image:"https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg", name: 'Item 3', quantity: 2, details: 'Details 3', pricePerOne: 20, category:"category 3" },
-    ];
-
-    // const handleItemClick = (item: ItemData) => {
-    //     history(`/detail/${item.id}`, { state: { item } });
-    // };
+    const handleOpenAddItem = async () => {
+        setIsAddItemOpen(!isAddItemOpen);
+      };
 
     return (
         <div className={styles.storage}>
             <h1 className={styles.header}>Склад</h1>
             <ul className={styles.list}>
                 {items.map((item) => (
-                    <StorageItem 
+                    <StorageItem
                         image={item.image}
                         key={item.id}  
                         id={item.id}
@@ -47,8 +44,9 @@ const Storage: React.FC = () => {
                 ))}
             </ul>
             <div>
-                <Button margin='0 20px 20px 20px' size='medium' backgroundColor='deepskyblue' hoverZoom='1.1' text='Добавити продукт вручну'/>
+                <Button onClick={handleOpenAddItem} margin='0 20px 20px 20px' size='medium' backgroundColor='deepskyblue' hoverZoom='1.1' text='Добавити продукт вручну'/>
             </div>
+            {isAddItemOpen && <StorageItemForm setOpen={handleOpenAddItem} setIsPosted={setIsPosted}/>}
         </div>
     );
 };
