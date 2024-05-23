@@ -6,36 +6,25 @@ const Footer = () => {
       <div className={styles.topContent}>
         <div className={styles.container}>
           <div className={styles.element}>
-            <h4>Some info</h4>
+            <h4>Реклама</h4>
             <ul className={styles.list}>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
             </ul>
           </div>
           <div className={styles.element}>
-            <h4>Some info</h4>
+            <h4>Реклама</h4>
             <ul className={styles.list}>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-            </ul>
-          </div>
-          <div className={styles.element}>
-            <h4>Some info</h4>
-            <ul className={styles.list}>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
-              <a href="#">qwe</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
+              <a href="#">інформація</a>
             </ul>
           </div>
           <div className={styles.element}>
@@ -62,7 +51,7 @@ const Footer = () => {
       </div>
       <hr />
       <div className={styles.bottomContent}>
-        <p>&copy; Copyright 2018 - Company Name. All rights reserved.</p>
+        <p>&copy; Copyright 2024 - Naz development. All rights reserved.</p>
       </div>
     </footer>
   );
