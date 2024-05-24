@@ -5,6 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using QrProject.Data.Entities;
 using QrProject.Domain.Dtos;
 using QrProject.Domain.Services.Interfaces;
+using System.IO;
+using System.Drawing;
+using QRCoder;
+using System.Drawing.Imaging;
 
 namespace QrBackEnd.Controllers
 {
@@ -49,6 +53,27 @@ namespace QrBackEnd.Controllers
         public async Task<IActionResult> GetStorageCount(string orgId)
         {
             return Ok(await _storageService.GetStorageCount(orgId));
+        }
+
+        [HttpGet("getGrCode")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> GetQrCode(string data)
+        {
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.Q);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Image qrCodeImage = qrCode.GetGraphic(20);
+
+            var bytes = ImageToByteArray(qrCodeImage);
+            return File(bytes, "image/jpeg");
+        }
+
+        private byte[] ImageToByteArray(Image imageIn)
+        {
+            MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, ImageFormat.Jpeg);
+            return ms.ToArray();
         }
 
         public OrganizationController(ILogger<OrganizationController> logger, IFirebaseClient client, IStorageService storageService)

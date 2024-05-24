@@ -7,7 +7,7 @@ import DeleteOrganizationForm from "../Forms/DeleteOrganizationForm/DeleteOrgani
 
 const Organization = () => {
   const [isCreateOrgOpen, setIsCreateOrgOpen] = useState<boolean>(false);
-  // const [isAddToOrgOpen, setIsAddToOrgOpen] = useState<boolean>(false);
+  const [isAddToOrgOpen, setIsAddToOrgOpen] = useState<boolean>(false);
   const [isDeleteOrgOpen, setIsDeleteOrgOpen] = useState<boolean>(false);
 
   const [isHaveOrg, setIsHaveOrg] = useState<boolean>(false);
@@ -21,6 +21,10 @@ const Organization = () => {
     setIsCreateOrgOpen(!isCreateOrgOpen);
   }
 
+  const handleAddToOrg = async () => {
+    setIsAddToOrgOpen(!isAddToOrgOpen)
+  }
+
   const handleDeleteOrg = async () => {
     setIsDeleteOrgOpen(!isDeleteOrgOpen);
   }
@@ -28,10 +32,11 @@ const Organization = () => {
   return (
     <section className={styles.container}>
       {!isHaveOrg && <Button onClick={handleCreateOrg} hoverBackgroundColor="#59d959" size="large" backgroundColor="#59d959" text="Створити організацію"/>}
-      <Button hoverBackgroundColor="#a3a3ed" size="large" backgroundColor="#8d8dd7" text="Добавити в організацію"/>
-      {isHaveOrg &&<Button onClick={handleDeleteOrg} hoverBackgroundColor="#ff1414" size="large" backgroundColor="orangered" text="Видалити організацію"/>}
+      {isHaveOrg && <Button onClick={handleDeleteOrg} hoverBackgroundColor="#a3a3ed" size="large" backgroundColor="#8d8dd7" text="Добавити в організацію"/>}
+      {isHaveOrg && <Button onClick={handleDeleteOrg} hoverBackgroundColor="#ff1414" size="large" backgroundColor="orangered" text="Видалити організацію"/>}
 
       {isCreateOrgOpen && <CreateOrganizationForm setOpen={handleCreateOrg} setIsHaveOrg={setIsHaveOrg}/>}
+      {isAddToOrgOpen && <CreateOrganizationForm setOpen={handleAddToOrg}/>}
       {isDeleteOrgOpen && <DeleteOrganizationForm setOpen={handleDeleteOrg} setIsHaveOrg={setIsHaveOrg}/>}
     </section>
   );

@@ -210,4 +210,36 @@ const deleteOrganization = async (orgId: string) => {
   }
 };
 
-export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization, deleteItem};
+const getQrCode = async (data:string) => {
+  try {
+
+    const token = window.localStorage.getItem('access_token');
+    // let config = {
+    //   headers: {'Authorization': 'JWT ' + this.$store.state.token},
+    //   params: {
+    //     page: f + 1
+    //   },
+    // }
+    const response = await axios.get('https://localhost:7198/api/Organization/getGrCode', 
+    {
+      responseType: 'blob',
+      params:{
+        data: data
+      },
+      headers: {
+          Authorization: `bearer ${token}`,
+      }
+    }
+  );
+  return response.data;
+
+    // Створення URL для зображення
+    // const url = window.URL.createObjectURL(new Blob([response.data]));
+    // setImageSrc(url);
+
+  } catch (error) {
+    console.error('Error downloading the image', error);
+  }
+};
+
+export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization, deleteItem,getQrCode};

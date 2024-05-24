@@ -74,12 +74,12 @@ const StorageItem: React.FC<ItemProps> = ({
             size="small"
             hoverColor="white"
             text="Добавити/Оновити"
-            onClick={() => addAndUpdateLocalStorage(id, name, counts[id] || 0, image || "")}
+            onClick={() => addAndUpdateLocalStorage(code, details, pricePerOne, category, name, counts[code] || 0, image || "")}
           />
           <div className={styles.counter}>
             <Counter
-            initialValue={counts[id] || 0}
-            onCountChange={(count) => handleCountChange(id, count)}
+            initialValue={counts[code] || 0}
+            onCountChange={(count) => handleCountChange(code, count)}
             maxValue={quantity}
             />
           </div>

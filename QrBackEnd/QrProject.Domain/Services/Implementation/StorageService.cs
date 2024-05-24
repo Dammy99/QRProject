@@ -15,7 +15,6 @@ namespace QrProject.Domain.Services.Implementation
 
         public async Task<IReadOnlyList<StorageItem>> GetAllStorageItems(Guid id)
         {
-
             var items = await client.GetAsync("StorageItems/" + id);
             if (items.Body == "null")
             {
