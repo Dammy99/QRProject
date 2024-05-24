@@ -5,6 +5,7 @@ import { getLocalStorageUser } from "../../../functions/localStorage";
 
 interface CreateOrganizationProps {
   setOpen: () => void;
+  setIsHaveOrg: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const CreateOrganizationForm = (props: CreateOrganizationProps) => {
@@ -17,6 +18,7 @@ const CreateOrganizationForm = (props: CreateOrganizationProps) => {
       await createOrganization(user.name, orgName);
       await getUser(user.name);
       props.setOpen();
+      props.setIsHaveOrg(true);
       
     } catch (error) {
       alert("Failed to add org");

@@ -3,4 +3,3 @@ export interface LocalStorageUser{
     name: string;
     orgId: string;
 }
-

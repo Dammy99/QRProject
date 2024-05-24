@@ -8,23 +8,13 @@ const Footer = () => {
           <div className={styles.element}>
             <h4>Реклама</h4>
             <ul className={styles.list}>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
+              <a href="#">Демчик</a>
             </ul>
           </div>
           <div className={styles.element}>
             <h4>Реклама</h4>
             <ul className={styles.list}>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
-              <a href="#">інформація</a>
+              <a href="#">Назар</a>
             </ul>
           </div>
           <div className={styles.element}>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { ItemDto } from "../components/StorageItem/StorageItem";
 import { v4 as uuidv4 } from "uuid";
+import { getLocalStorageUser } from "../functions/localStorage";
 
 interface RegisterLoginProps {
   name: string;
@@ -140,6 +141,31 @@ const postItems = async (storageItemDto: ItemDto) => {
   }
 };
 
+const deleteItem = async (id: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+    const user = getLocalStorageUser();
+    const response = await axios.delete(
+      `https://localhost:7198/api/Organization/storageItem/${user.orgId}/${id}`,
+      { 
+        headers: {
+            Authorization: `bearer ${token}`,
+        }
+      }
+    );
+    await getUser(user.name);
+    return response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
+  }
+};
+
+
+// -------------------------------------------------------------------------------------------
+
+
 const createOrganization = async (userEmail :string, orgName: string) => {
   try {
     const token = window.localStorage.getItem('access_token');
@@ -184,4 +210,4 @@ const deleteOrganization = async (orgId: string) => {
   }
 };
 
-export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization};
+export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization, deleteItem};

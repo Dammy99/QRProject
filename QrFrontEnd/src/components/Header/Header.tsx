@@ -29,7 +29,11 @@ const Header: React.FC = () => {
   };
 
   const handleExit = () => {
-    confirm("Exit?");
+    const confirmed = confirm("Exit?");
+    if (confirmed) {
+      localStorage.clear();
+      window.location.reload()
+    }
   }
 
   const handleStorageClick = () => {

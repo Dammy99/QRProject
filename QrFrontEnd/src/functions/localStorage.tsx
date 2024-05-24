@@ -1,6 +1,6 @@
 import { LocalStorageUser } from "../interfaces/interfaces";
 
-const addAndUpdateLocalStorage = (id: string, count: number, imageSrc: string) => {
+const addAndUpdateLocalStorage = (id: string, name: string, count: number, imageSrc: string) => {
     const items = getLocalStorageItems();
     if (count === 0) {
       // Видаляємо елемент, якщо count рівний нулю
@@ -13,10 +13,10 @@ const addAndUpdateLocalStorage = (id: string, count: number, imageSrc: string) =
       const index = items.findIndex((item: { id: string }) => item.id === id);
       if (index !== -1) {
         // Оновлюємо існуючий елемент, якщо він знайдений
-        items[index] = { id, count, imageSrc };
+        items[index] = { id, name, count, imageSrc };
       } else {
         // Додаємо новий елемент, якщо він не знайдений
-        items.push({ id, count, imageSrc });
+        items.push({ id, name, count, imageSrc });
       }
       localStorage.setItem('items', JSON.stringify(items));
     }

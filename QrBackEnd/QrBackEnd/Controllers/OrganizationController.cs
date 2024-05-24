@@ -33,12 +33,12 @@ namespace QrBackEnd.Controllers
         }
         
         [Authorize]
-        [HttpDelete("storageItem")]
+        [HttpDelete("storageItem/{orgId}/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> DeleteStorageItem(StorageItemDto storageItemDto)
+        public async Task<IActionResult> DeleteStorageItem(string orgId, string id)
         {
-            await _storageService.DeleteStorageItem(storageItemDto);
+            await _storageService.DeleteStorageItem(orgId, id);
             return Ok();
         }
 

@@ -98,6 +98,13 @@ namespace QrProject.Domain.Services.Implementation
 
         }
 
+        public async Task AddUserToOrganization(AddUserDto userDto)
+        {
+            var user = (await _client.GetAsync($"Users/{userDto.Name}")).ResultAs<User>();
+            user.OrgId = userDto.OrgId;
+            await _client.UpdateAsync($"Users/{userDto.Name}", user);
+        }
+
         public UserService(IConfiguration configuration, IFirebaseClient client, IAuthService authService)
         {
             _extensionsWrapper = new ExtensionsWrapper(configuration);

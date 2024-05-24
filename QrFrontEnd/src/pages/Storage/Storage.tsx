@@ -45,6 +45,7 @@ const Storage: React.FC = () => {
                         pricePerOne={item.pricePerOne}
                         code={item.code}
                         category={item.category}
+                        setIsDeleted={setIsPosted}
                     />
                 ))}
             </ul>

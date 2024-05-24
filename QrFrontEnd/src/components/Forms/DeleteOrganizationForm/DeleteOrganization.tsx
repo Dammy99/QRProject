@@ -5,6 +5,7 @@ import { getLocalStorageUser } from "../../../functions/localStorage";
 
 interface DeleteOrganizationProps {
   setOpen: () => void;
+  setIsHaveOrg: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const DeleteOrganizationForm = (props: DeleteOrganizationProps) => {
@@ -15,6 +16,7 @@ const DeleteOrganizationForm = (props: DeleteOrganizationProps) => {
       await deleteOrganization(user.orgId);
       await getUser(user.name);
       props.setOpen();
+      props.setIsHaveOrg(false);
       
     } catch (error) {
       alert("Failed to add org");

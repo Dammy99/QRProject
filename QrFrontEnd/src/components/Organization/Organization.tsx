@@ -19,12 +19,10 @@ const Organization = () => {
 
   const handleCreateOrg = async () => {
     setIsCreateOrgOpen(!isCreateOrgOpen);
-    setIsHaveOrg(true);
   }
 
   const handleDeleteOrg = async () => {
     setIsDeleteOrgOpen(!isDeleteOrgOpen);
-    setIsHaveOrg(false);
   }
 
   return (
@@ -33,8 +31,8 @@ const Organization = () => {
       <Button hoverBackgroundColor="#a3a3ed" size="large" backgroundColor="#8d8dd7" text="Добавити в організацію"/>
       {isHaveOrg &&<Button onClick={handleDeleteOrg} hoverBackgroundColor="#ff1414" size="large" backgroundColor="orangered" text="Видалити організацію"/>}
 
-      {isCreateOrgOpen && <CreateOrganizationForm setOpen={handleCreateOrg}/>}
-      {isDeleteOrgOpen && <DeleteOrganizationForm setOpen={handleDeleteOrg}/>}
+      {isCreateOrgOpen && <CreateOrganizationForm setOpen={handleCreateOrg} setIsHaveOrg={setIsHaveOrg}/>}
+      {isDeleteOrgOpen && <DeleteOrganizationForm setOpen={handleDeleteOrg} setIsHaveOrg={setIsHaveOrg}/>}
     </section>
   );
 };

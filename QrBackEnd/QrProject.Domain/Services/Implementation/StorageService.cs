@@ -8,9 +8,9 @@ namespace QrProject.Domain.Services.Implementation
 {
     public class StorageService(IFirebaseClient client) : IStorageService
     {
-        public async Task DeleteStorageItem(StorageItemDto storageItemDto)
+        public async Task DeleteStorageItem(string orgId, string id)
         {
-            await client.DeleteAsync($"StorageItems/{storageItemDto.OrgId}/{storageItemDto.Id}");
+            await client.DeleteAsync($"StorageItems/{orgId}/{id}");
         }
 
         public async Task<IReadOnlyList<StorageItem>> GetAllStorageItems(Guid id)

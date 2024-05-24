@@ -4,7 +4,8 @@ import { getLocalStorageItems } from "../../functions/localStorage";
 import Button from "../../components/Buttons/ProjButton/ProjButton";
 
 interface GenerationProduct {
-  id: number;
+  id: string;
+  name: string;
   count: number;
   imageSrc: string;
 }
@@ -31,7 +32,7 @@ const Generation = () => {
         {products.map((product) => (
           <div className={styles.element} key={product.id}>
             <img className={styles.image} src={product.imageSrc} />
-            <h2 className={styles.id}>{product.id}</h2>
+            <h2 className={styles.id}>{product.name}</h2>
             <h3 className={styles.quantity}>Кількість: {product.count}</h3>
             {/* <p>Серійний номер: {product.serialNumber}</p> */}
             {/* <button onClick={() => handleProductSelect(product)}>Вибрати</button> */}
