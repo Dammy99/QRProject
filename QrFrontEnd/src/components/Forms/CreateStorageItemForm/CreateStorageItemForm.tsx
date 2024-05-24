@@ -10,7 +10,7 @@ interface StorageItemProps {
 
 const StorageItemForm = (props: StorageItemProps) => {
   const [formState, setFormState] = useState<ItemDto>({
-    Id: "", // ID буде встановлений на бекенді або при відправці
+    Id: "", // ID буде встановлений при відправці
     OrgId: getLocalStorageUser().orgId,
     Quantity: 0,
     Name: "",
@@ -34,7 +34,7 @@ const StorageItemForm = (props: StorageItemProps) => {
     e.preventDefault();
     props.setOpen();
     try {
-      const newItem = { ...formState }; // або інший спосіб генерувати унікальний ID
+      const newItem = { ...formState };
       await postItems(newItem);
       setFormState({
         Id: "",
@@ -53,32 +53,22 @@ const StorageItemForm = (props: StorageItemProps) => {
     }
   };
 
-//   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     const reader = new FileReader();
-//     reader.readAsDataURL(e.target.files![0]);
-//     reader.onload = () => {
-//         console.log(reader.result);
-//     //   setFormState((prevState) => ({
-//     //     ...prevState,
-//     //     image: reader.result as string,
-//     //   }));
-//     };
-//     reader.onerror = error =>{
-//         console.log('Error: ', error);
-//     } 
-//   }
-
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-    //   setImage(e.target.files[0]);
-    const { name, value } = e.target;
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files![0]);
+    reader.onload = () => {
+
+      console.log(e.target);
       setFormState((prevState) => ({
         ...prevState,
-        [name]: value,
+        image: reader.result as string,
       }));
-    }
-    console.log(formState)
-  };
+
+    };
+    reader.onerror = error =>{
+        console.log('Error: ', error);
+    } 
+  }
 
   return (
     <section className={styles.page}>
@@ -110,7 +100,8 @@ const StorageItemForm = (props: StorageItemProps) => {
             </div>
             <div>
                 <label>Image:</label>
-                <input type="file" name="Image" value={formState.Image} onChange={handleImageChange} />
+                <input type="file" style={{color:"transparent"}} name="Image" value={formState.Image} onChange={handleImageChange} />
+                {formState.image && <div>Зображення вибране</div>}
             </div>
             <button type="submit">Add Item</button>
         </form>
@@ -120,13 +111,3 @@ const StorageItemForm = (props: StorageItemProps) => {
 };
 
 export default StorageItemForm;
-
-
-      /* <div>
-        <label>Image URL:</label>
-        <input type="text" name="image" value={formState.image} onChange={handleChange} />
-      </div> */
-      /* <div>
-        <label>Image:</label>
-        <input type="file" name="image" value={formState.image} onChange={handleChange} />
-      </div> */
