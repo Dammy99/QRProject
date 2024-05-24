@@ -89,13 +89,29 @@ const getUser = async (name: string) => {
     );
     localStorage.setItem("user", JSON.stringify(response.data));
     return response.data;
-
   } catch (error) {
     alert(error);
     return null;
   }
 };
 
+const addUserToOrganization = async (name: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+    const response = await axios.post(
+      "https://localhost:7198/api/User/addToOrg", name,
+      {
+        headers:{
+            Authorization: `bearer ${token}`,
+        }
+      }
+    );
+    return response.data;
+  } catch (error) {
+    alert("Такого користувача немає");
+    return null;
+  }
+};
 
 // -------------------------------------------------------------------------------------------
 
@@ -214,12 +230,6 @@ const getQrCode = async (data:string) => {
   try {
 
     const token = window.localStorage.getItem('access_token');
-    // let config = {
-    //   headers: {'Authorization': 'JWT ' + this.$store.state.token},
-    //   params: {
-    //     page: f + 1
-    //   },
-    // }
     const response = await axios.get('https://localhost:7198/api/Organization/getGrCode', 
     {
       responseType: 'blob',
@@ -232,14 +242,9 @@ const getQrCode = async (data:string) => {
     }
   );
   return response.data;
-
-    // Створення URL для зображення
-    // const url = window.URL.createObjectURL(new Blob([response.data]));
-    // setImageSrc(url);
-
   } catch (error) {
     console.error('Error downloading the image', error);
   }
 };
 
-export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization, deleteItem,getQrCode};
+export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization, deleteItem,getQrCode, addUserToOrganization};

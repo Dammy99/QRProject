@@ -22,6 +22,17 @@
     right: 0;
     bottom: 0;
 }
+form{
+    div{
+        min-width: 100%;
+    }
+    input[type="password"]{
+        min-width: 90%;
+    }
+    button{
+        margin-top: 30px;
+    }
+}
 
 .registration {
     z-index: 100;

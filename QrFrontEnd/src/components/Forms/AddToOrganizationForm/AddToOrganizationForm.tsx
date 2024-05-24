@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./CreateOrganization.module.css";
-import { createOrganization, getUser } from "../../../apis/apis";
+import styles from "./AddToOrganizationForm.module.css";
+import { createOrganization } from "../../../apis/apis";
 import { getLocalStorageUser } from "../../../functions/localStorage";
 
 interface CreateOrganizationProps {
@@ -8,24 +8,17 @@ interface CreateOrganizationProps {
 }
 
 const AddToOrganizationForm = (props: CreateOrganizationProps) => {
-  const [orgName, setOrgName] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      const user = getLocalStorageUser();
-      await createOrganization(user.name, orgName);
-      await getUser(user.name);
-      props.setOpen();
-      
-    } catch (error) {
-      alert("Failed to add org");
-      props.setOpen();
-    }
+    const user = getLocalStorageUser();
+    props.setOpen();
+    await createOrganization(username, user.orgId);
   };
 
   const handleOrgNameEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setOrgName(e.target.value);
+    setUsername(e.target.value);
   };
 
   return (
@@ -33,10 +26,10 @@ const AddToOrganizationForm = (props: CreateOrganizationProps) => {
       <div className={styles.background}></div>
         <form className={styles.registration} onSubmit={handleSubmit}>
             <div>
-                <label>Org name:</label>
-                <input type="text" value={orgName} onChange={handleOrgNameEmail} required />
+                <label>Ім'я користувача:</label>
+                <input type="text" value={username} onChange={handleOrgNameEmail} required />
             </div>
-            <button type="submit">Add Item</button>
+            <button type="submit">Добавити</button>
         </form>
       <img className={styles.regImg} onClick={props.setOpen} src="/cross.png" />
     </section>
