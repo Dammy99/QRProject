@@ -1,5 +1,6 @@
 ﻿using BCrypt.Net;
 using FirebaseAdmin.Auth.Hash;
+using FireSharp;
 using FireSharp.Interfaces;
 using Microsoft.Extensions.Configuration;
 using QrProject.Data.Entities;
@@ -7,6 +8,7 @@ using QrProject.Domain.Dtos;
 using QrProject.Domain.Extentions;
 using QrProject.Domain.Helpers;
 using QrProject.Domain.Services.Interfaces;
+using System.Xml.Linq;
 
 namespace QrProject.Domain.Services.Implementation
 {
@@ -77,6 +79,24 @@ namespace QrProject.Domain.Services.Implementation
             return organization.ToDto();
         }
 
+        public async Task DeleteOrganization(string orgId)
+        {
+            await _client.GetAsync($"Users");
+            var users = (await _client.GetAsync($"Users")).ResultAs<IDictionary<string, User>>();
+            foreach (var item in users)
+            {
+                var value = item.Value;
+                if (value.OrgId.ToString() == orgId)
+                {
+                    value.OrgId = Guid.Empty;
+                    await _client.UpdateAsync($"Users/{value.Name}", value);
+                }
+            }
+
+            await _client.DeleteAsync($"StorageItems/{orgId}");
+            await _client.DeleteAsync($"Organizations/{orgId}");
+
+        }
 
         public UserService(IConfiguration configuration, IFirebaseClient client, IAuthService authService)
         {

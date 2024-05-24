@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./CreateOrganization.module.css";
-import { createOrganization } from "../../../apis/apis";
+import { createOrganization, getUser } from "../../../apis/apis";
 import { getLocalStorageUser } from "../../../functions/localStorage";
 
 interface CreateOrganizationProps {
@@ -13,8 +13,9 @@ const CreateOrganizationForm = (props: CreateOrganizationProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const userEmail = getLocalStorageUser().name;
-      await createOrganization(userEmail, orgName);
+      const user = getLocalStorageUser();
+      await createOrganization(user.name, orgName);
+      await getUser(user.name);
       props.setOpen();
       
     } catch (error) {

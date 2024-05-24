@@ -3,7 +3,7 @@ import styles from "./RegistrationForm.module.css";
 import RegisterButton from "../../Buttons/ProjButton/ProjButton";
 import TextInput from "../../Input/PasswordInput";
 import { UserContext, UserContextType } from "../../../App";
-import { getUser, registerUser } from "../../../apis/apis";
+import {registerUser } from "../../../apis/apis";
 interface RegisterProps {
   setOpen: () => void;
 }

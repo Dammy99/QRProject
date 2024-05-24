@@ -26,6 +26,23 @@ namespace QrBackEnd.Controllers
             return Ok(await _userService.CreateOrganization(organizationDto.userEmail, organizationDto.orgName));
         }
 
+        [HttpDelete("deleteOrg/{orgId}"), Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> DeleteOrganization(string orgId)
+        {
+            await _userService.DeleteOrganization(orgId);
+            return Ok();
+        }
+
+        [HttpPost("addToOrg"), Authorize]
+        [ProducesResponseType<OrganizationDto>(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> AddUserToOrganization(string username)
+        {
+            return Ok(await _userService.CreateOrganization(organizationDto.userEmail, organizationDto.orgName));
+        }
+
         public UserController(IUserService userService)
         {
             _userService = userService;

@@ -16,9 +16,9 @@ const OrganizationHome: React.FC = () => {
 
     return (
         <div className={styles.home}>
-            <h1>Ласкаво просимо в {user?.name}</h1>
-            <p>Загалом в організації зареєстровано {count} продукт/и/ів</p>
-            <p>This is the home page of our site.</p>
+            <h1>Ласкаво просимо {user?.name}</h1>
+            <p>Загалом в організації зареєстровано {count} продукт{count === 0 ? "" : count < 5 ? "и" : "ів"}</p>
+            <p>Це домашня сторінка.</p>
         </div>
     );
 };

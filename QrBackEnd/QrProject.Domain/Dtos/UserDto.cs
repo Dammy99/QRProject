@@ -6,4 +6,10 @@
         public string Name { get; set; }
         public Guid? OrgId { get; set; }
     }
+
+    public class AddUserDto
+    {
+        public string Name { get; set; }
+        public Guid? OrgId { get; set; }
+    }
 }

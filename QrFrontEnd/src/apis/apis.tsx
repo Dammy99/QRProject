@@ -164,4 +164,24 @@ const createOrganization = async (userEmail :string, orgName: string) => {
   }
 };
 
-export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization};
+const deleteOrganization = async (orgId: string) => {
+  try {
+    const token = window.localStorage.getItem('access_token');
+
+    const response = await axios.delete(
+      `https://localhost:7198/api/User/deleteOrg/${orgId}`,
+      { 
+        headers: {
+            Authorization: `bearer ${token}`,
+        }
+      }
+    );
+    return response.data;
+
+  } catch (error) {
+    alert(error);
+    return null;
+  }
+};
+
+export { registerUser, loginUser, getOrgStorageCount, getUser, getItems, postItems, createOrganization, deleteOrganization};

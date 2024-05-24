@@ -11,6 +11,8 @@ const Storage: React.FC = () => {
     const [isAddItemOpen, setIsAddItemOpen] = useState<boolean>(false);
     const [items, setItems] = useState<ItemProps[]>([]);
     const [isPosted, setIsPosted] = useState<boolean>(false);
+    const [isHaveOrg, setIsHaveOrg] = useState<boolean>(false);
+
     useEffect(() => {
         const fetchItems = async () => {
             const orgId = getLocalStorageUser().orgId;
@@ -19,6 +21,9 @@ const Storage: React.FC = () => {
         };
         fetchItems();
         setIsPosted(false);
+        if (getLocalStorageUser().orgId !== "00000000-0000-0000-0000-000000000000") {
+            setIsHaveOrg(true);
+          }
     }, [isPosted]);
 
     const handleOpenAddItem = async () => {
@@ -44,7 +49,9 @@ const Storage: React.FC = () => {
                 ))}
             </ul>
             <div>
-                <Button onClick={handleOpenAddItem} margin='0 20px 20px 20px' size='medium' backgroundColor='deepskyblue' hoverZoom='1.1' text='Добавити продукт вручну'/>
+                {!isHaveOrg 
+                ? <div>Створіть організацію перед використанням</div> 
+                : <Button onClick={handleOpenAddItem} margin='0 20px 20px 20px' size='medium' backgroundColor='deepskyblue' hoverZoom='1.1' text='Добавити продукт вручну'/>}
             </div>
             {isAddItemOpen && <StorageItemForm setOpen={handleOpenAddItem} setIsPosted={setIsPosted}/>}
         </div>
