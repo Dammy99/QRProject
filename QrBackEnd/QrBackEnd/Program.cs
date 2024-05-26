@@ -1,8 +1,6 @@
 using FireSharp.Config;
 using FireSharp.Interfaces;
-using System.IO;
 using QrBackEnd.Configuration;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.IdentityModel.Tokens;
@@ -47,20 +45,6 @@ namespace QrBackEnd
                     ValidIssuer = "https://localhost:5001"
                 };
             });
-            //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //    .AddJwtBearer(options =>
-            //    {
-            //        options.TokenValidationParameters = new TokenValidationParameters
-            //        {
-            //            ValidateIssuer = true,
-            //            ValidateAudience = true,
-            //            ValidateLifetime = true,
-            //            ValidateIssuerSigningKey = true,
-            //            ValidIssuer = "https://localhost:5001",
-            //            ValidAudience = "https://localhost:5001",
-            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"))
-            //        };
-            //    });
 
             builder.Services.AddMyDependencies();
 

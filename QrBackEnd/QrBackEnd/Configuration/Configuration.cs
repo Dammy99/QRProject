@@ -10,7 +10,6 @@ namespace QrBackEnd.Configuration
         {
             services.AddScoped<IStorageService, StorageService>();
             services.AddScoped<IAuthService, AuthService>();
-            services.AddScoped<IOrganizationService, OrganizationService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IExtensionsWrapper, ExtensionsWrapper>();
 

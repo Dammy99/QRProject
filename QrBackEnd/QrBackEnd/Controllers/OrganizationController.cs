@@ -1,13 +1,11 @@
 ﻿using FireSharp.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using QRCoder;
 using QrProject.Data.Entities;
 using QrProject.Domain.Dtos;
 using QrProject.Domain.Services.Interfaces;
-using System.IO;
 using System.Drawing;
-using QRCoder;
 using System.Drawing.Imaging;
 
 namespace QrBackEnd.Controllers

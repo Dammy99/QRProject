@@ -12,9 +12,6 @@ namespace QrProject.Domain.Helpers
         public static string GenerateJwtToken(this IConfiguration configuration, string email, string role)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            //var key = Encoding.ASCII.GetBytes(_configuration);
-            var pepe = configuration.GetSection("AppSettings:Secret").Value;
-            var pepe1 = configuration["Secret"];
             var key = Encoding.UTF8.GetBytes(configuration.GetSection("AppSettings:Secret").Value!);
 
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -29,38 +26,6 @@ namespace QrProject.Domain.Helpers
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
-        }
-
-        public static string GetEmailFromToken(string token, string secret)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(secret);
-            var tokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(key),
-                ValidateIssuer = false,
-                ValidateAudience = false,
-                ClockSkew = TimeSpan.Zero
-            };
-            var claims = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken validatedToken);
-            return claims.FindFirst(ClaimTypes.Email).Value;
-        }
-
-        public static string GetRoleFromToken(string token, string secret)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(secret);
-            var tokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = new SymmetricSecurityKey(key),
-                ValidateIssuer = false,
-                ValidateAudience = false,
-                ClockSkew = TimeSpan.Zero
-            };
-            var claims = tokenHandler.ValidateToken(token, tokenValidationParameters, out SecurityToken validatedToken);
-            return claims.FindFirst(ClaimTypes.Role).Value;
         }
     }
 }

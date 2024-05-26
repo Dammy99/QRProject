@@ -46,7 +46,7 @@ const Generation = () => {
         ))}
       </div>
 
-      <Button onClick={handeGenerateQrCode} text="Generate QR" hoverBackgroundColor="#23a923" backgroundColor="darkgray" size="medium" color="black" />
+      <Button onClick={handeGenerateQrCode} text="Згенерувати QR код" hoverBackgroundColor="#23a923" backgroundColor="darkgray" size="medium" color="black" />
       {imageSrc && <img style={{maxWidth:"100%", maxHeight:"500px"}} src={imageSrc} alt="Downloaded" />}
 
     </section>
